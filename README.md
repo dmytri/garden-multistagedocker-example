@@ -28,10 +28,10 @@ minikube or other local kubernetes
 `garden dev`
 
 #####  Expected Result
-unit test passes
-npm-not-installed test passes
-npm-installed test is skipped
-install test is skipped
+- unit test passes
+- npm-not-installed test passes
+- npm-installed test is skipped
+- install test is skipped
 
 #### Command
 `garden test`
