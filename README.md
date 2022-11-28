@@ -43,6 +43,7 @@ minikube or other local kubernetes
 - install test passes
 
 ## See
+- [site/Dockerfile](site/Dockerfile)
 - [site/garden.yml](site/garden.yml)
 - [https://docs.garden.io/reference/module-types/container#build.targetimage](https://docs.garden.io/reference/module-types/container#build.targetimage)
 - [https://docs.garden.io/reference/template-strings/modules#usd-command.name](https://docs.garden.io/reference/template-strings/modules#usd-command.name)
