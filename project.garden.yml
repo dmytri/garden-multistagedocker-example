@@ -1,0 +1,12 @@
+kind: Project
+name: multistagedocker
+environments:
+  - name: dev
+    defaultNamespace: dmytri-example-dev
+
+defaultEnvironment: dev
+
+providers:
+  - name: local-kubernetes
+    namespace: ${environment.namespace}
+    buildMode: cluster-buildkit

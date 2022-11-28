@@ -1,0 +1,39 @@
+kind: Module
+type: container
+name: site
+description: a really cool website you should visit often
+
+variables:
+  target-image: "${command.name == 'test' ? 'build-test' : 'build-deploy'}"
+
+build:
+  targetImage: ${var.target-image}
+
+services:
+  - name: site
+    ports:
+      - name: http
+        containerPort: 8080
+        servicePort: 80
+    ingresses:
+      - path: /
+        port: http
+
+tests:
+# this test will always pass
+  - name: unit
+    args: [echo, ok]
+
+# this will only pass if npm is not installed
+  - name: npm-not-installed
+    args: ["sh", "-c", "[ -x \"$(command -v npm)\" ] && exit 1 || exit 0 ]"]
+    disabled: ${var.target-image == 'build-test'}
+
+# these will only pass if npm is installed
+  - name: npm-installed
+    args: ["sh", "-c", "[ -x \"$(command -v npm)\" ] && exit 0 || exit 1 ]"]
+    disabled: ${var.target-image != 'build-test'}
+  - name: install
+    disabled: ${var.target-image != 'build-test'}
+    args: [npm, install]
+
