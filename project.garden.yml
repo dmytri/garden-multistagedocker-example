@@ -1,5 +1,6 @@
 kind: Project
 name: multistagedocker
+
 environments:
   - name: dev
     defaultNamespace: dmytri-example-dev
