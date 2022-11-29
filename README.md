@@ -47,4 +47,6 @@ minikube or other local kubernetes
 - [site/garden.yml](site/garden.yml)
 - [https://docs.garden.io/reference/module-types/container#build.targetimage](https://docs.garden.io/reference/module-types/container#build.targetimage)
 - [https://docs.garden.io/reference/template-strings/modules#usd-command.name](https://docs.garden.io/reference/template-strings/modules#usd-command.name)
+- [https://garden.io](https://garden.io)
+
 
