@@ -15,8 +15,8 @@ Use a multistage docker container and the `targetImage` build setting.
 ### Steps
 1. Create a Dockerfile with two stages, build-test, and build-deploy, that both extend a common base image
 1. Add something that is only available for `garden test` to the build-test target, in this example `npm`
-1. Create a variable target-image and set it to build-test when `garden test` is run, garden-deploy
-1. add a test icalled install that uses `npm` (only available in build-test target)
+1. Create a variable target-image and set it to build-test when `garden test` is run, garden-deploy otherwise
+1. add a test called install that uses `npm` (only available in build-test target)
 1. disable this test if target-image is not build-test
 
 ## Running Example
